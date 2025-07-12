@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: calc(100vw * 0.02);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  padding: 32px 0;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.data-container {
+  text-align: center;
+  font-family: "Roboto";
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+  border: 2px solid red;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  padding: 1rem;
+}
+
+.data-container p {
+  margin-bottom: 1rem;
+  position: relative;
+  bottom: 27px;
+  background-color: white;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #ff0a54;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.buttons {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto";
+  transition: all 200ms ease-in;
+  font-size: 1rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff0a54;
+  background-position: left right;
+  color: white;
+}
+
+button.clicked {
+  transform: scale(1);
+  background-color: #ff0a54;
+  background-position: left right;
+  color: white;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  margin: 0 10%;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  margin: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 1rem;
+  font-family: "Roboto";
+}
+
+.table th {
+  background-color: #ff0a54;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+  
+}
+
+.table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.table input:focus {
+  outline: none;
+  border-color: #ff0a54;
+  box-shadow: 0 0 5px rgba(255, 10, 84, 0.3);
+}
+
+.data-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.data-input {
+  font-family: "Roboto";
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#rowcount {
+  padding:15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  width: 180px;
+}
+
+#calculate-button {
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto";
+  transition: all 200ms ease-in;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#calculate-button:hover {
+  transform: scale(1.1);
+  background-color: #ff0a54;
+  background-position: left right;
+  color: white;
+}
+  
+
+@media (max-width: 630px) {
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .data-inputs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .data-container p {
+    font-size: 1.2rem;
+    bottom: 28px;
+  }
+  .buttons button {
+    font-size: 1.2rem;
+    width: 250px;
+    padding: 1.5rem 3rem;
+  }
+  .options {
+    font-size: 1.2rem;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .options {
+    grid-template-columns: auto;
+    margin: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}

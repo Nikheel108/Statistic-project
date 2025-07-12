@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="MufcrmUXJHikUBpscvurx8TZmQnuRnhGfVQO2Ukcugo" />
+    <title>Statistics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Statistical Data</h1>
+    </header>
+
+    <div class="data-type data-container" id="data-type">
+        <p>Select Data Type</p>
+        <div class="buttons">
+            <button id="categorial-data-button">Categorial Data</button>
+            <button id="numerical-data-button">Numerical Data</button>
+        </div>
+    </div>
+
+    <div class="data-subtype data-container hidden" id="data-subtype">
+        <p>Select Data Subtype</p>
+
+        <div class="buttons hidden" id="categorial-data-buttons">
+            <button id="nominal-data-button">Nominal Data</button>
+            <button id="ordinal-data-button">Ordinal Data</button>
+        </div>
+
+        <div class="buttons hidden" id="numerical-data-buttons">
+            <button id="discrete-data-button">Discrete Data</button>
+            <button id="continuous-data-button">Continuous Data</button>
+        </div>
+    </div>
+
+    <div class="calculation-options data-container hidden" id="calculation-options">
+        <p>Calculations Available</p>
+
+        <div class="options hidden" id="nominal-data-options">
+            <label for="nominal-data-mode">
+                <input type="checkbox" id="nominal-data-mode" /> Mode
+            </label>
+            <label for="nominal-data-frequency">
+                <input type="checkbox" id="nominal-data-frequency" /> Frequency
+            </label>
+            <label for="nominal-data-proportion">
+                <input type="checkbox" id="nominal-data-proportion" /> Proportion
+            </label>
+        </div>
+
+        <div class="options hidden" id="ordinal-data-options">
+            <label for="ordinal-data-mode">
+                <input type="checkbox" id="ordinal-data-mode" /> Mode
+            </label>
+            <label for="ordinal-data-median">
+                <input type="checkbox" id="ordinal-data-median" /> Median
+            </label>
+            <label for="ordinal-data-frequency">
+                <input type="checkbox" id="ordinal-data-frequency" /> Frequency
+            </label>
+            <label for="ordinal-data-correlation">
+                <input type="checkbox" id="ordinal-data-correlation" /> Correlation
+            </label>
+        </div>
+
+        <div class="options hidden" id="numerical-data-options">
+            <label for="numerical-data-mean">
+                <input type="checkbox" id="numerical-data-mean" /> Mean
+            </label>
+            <label for="numerical-data-median">
+                <input type="checkbox" id="numerical-data-median" /> Median
+            </label>
+            <label for="numerical-data-mode">
+                <input type="checkbox" id="numerical-data-mode" /> Mode
+            </label>
+            <label for="numerical-data-range">
+                <input type="checkbox" id="numerical-data-range" /> Range
+            </label>
+            <label for="numerical-data-variance">
+                <input type="checkbox" id="numerical-data-variance" /> Variance
+            </label>
+            <label for="numerical-data-standard-deviation">
+                <input type="checkbox" id="numerical-data-standard-deviation" />
+                Standard Deviation
+            </label>
+            <label for="numerical-data-quartiles">
+                <input type="checkbox" id="numerical-data-quartiles" /> Quartiles
+            </label>
+            <label for="numerical-data-percentile">
+                <input type="checkbox" id="numerical-data-percentile" /> Percentile
+            </label>
+            <label for="numerical-data-moments">
+                <input type="checkbox" id="numerical-data-moments" /> Moments
+            </label>
+            <label for="numerical-data-skewness">
+                <input type="checkbox" id="numerical-data-skewness" /> Skewness
+            </label>
+            <label for="numerical-data-kurtosis">
+                <input type="checkbox" id="numerical-data-kurtosis" /> Kurtosis
+            </label>
+            <label for="numerical-data-correlation">
+                <input type="checkbox" id="numerical-data-correlation" /> Karl
+                Pearson's Coefficient of Correlation
+            </label>
+            <label for="numerical-data-regression">
+                <input type="checkbox" id="numerical-data-regression" /> Regression
+            </label>
+            <label for="numerical-data-covariance">
+                <input type="checkbox" id="numerical-data-covariance" /> Covariance
+            </label>
+        </div>
+
+        
+    </div>
+    <div class="data-container buttons hidden" id="input-container">
+        
+        <div class="data-inputs">
+            <label for="rowcount" class="data-input"></label>
+            <input type="number" id="rowcount" class="data-input" min="1" max="20" placeholder="Enter the no. of rows"/>
+        </div>
+        <button id="generate-button">Generate table</button>
+    </div>
+
+    <div class="data-container hidden" id="inputTable">
+        <!-- Generated table will appear here -->
+    </div>
+
+    <button id="calculate-button" class="hidden">Calculate</button>
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
